@@ -7,6 +7,8 @@ export default class MyDocument extends Document {
                 <Head>
                     <link rel="preconcert" href="https://fonts.gstatic.com" />
                     <link href="https://fonts.googleapis.com/css?family=Inter&family=Lexend:wght500;600;display=swap" rel="stylesheet" />
+
+                    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
                 </Head>
                 <body>
                     <Main />
