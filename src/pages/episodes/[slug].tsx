@@ -1,5 +1,4 @@
 import {GetStaticProps, GetStaticPaths} from 'next';
-import {useRouter} from 'next/router';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -29,13 +28,6 @@ type EpisodeProps = {
 }
 
 export default function Episode( {episode }:EpisodeProps ) {
-    /*
-    const router = useRouter();
-
-    if (router.isFallback) {
-        return (<p>Carregando...</p>);
-    }
-    */
 
     const { play } = usePlayer();
 

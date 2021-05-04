@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState} from 'react';
+import { useEffect, useRef, useState} from 'react';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
@@ -29,7 +29,7 @@ export function Player() {
         hasNext,
         hasPrevious,
         clearPlayerState,
-    } = usePlayer();
+    } = usePlayer(); //PlayerContexts
 
     useEffect(() => {
         if (!audioRef.current) {

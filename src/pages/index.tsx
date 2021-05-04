@@ -31,12 +31,9 @@ type HomeProps = {
 }
 
 export default function Home({lastedEpisodes, allEpisodes}: HomeProps) {
-  const {playList} = usePlayer(); //useContext(PlayerContext);
+  const {playList} = usePlayer(); //PlayerContext
 
   const episodeList = [...lastedEpisodes, ...allEpisodes];
-
-
-
   
   return (
     <div className={styles.homepage}>
@@ -123,10 +120,7 @@ export default function Home({lastedEpisodes, allEpisodes}: HomeProps) {
   );
 }
 
-//export async function getStaticProps() {
 export const getStaticProps: GetStaticProps = async () => {
-  //const response = await fetch('http://localhost:3333/episodes/');
-  //const data = await response.json();
 
   const {data} = await api.get('episodes', {
     params: {
