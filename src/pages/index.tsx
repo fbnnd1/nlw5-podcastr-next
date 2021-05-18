@@ -46,6 +46,7 @@ export default function Home({lastedEpisodes, allEpisodes}: HomeProps) {
           {lastedEpisodes.map((episode, index) => {
             return (
               <li key={episode.id}>
+                
                 <Image 
                   width={192} 
                   height={192} 
@@ -61,17 +62,18 @@ export default function Home({lastedEpisodes, allEpisodes}: HomeProps) {
                   <p>{episode.members}</p>
                   <span>{episode.publishedAt}</span>
                   <span>{episode.durationAsString}</span>
+                
+                  <button type="button" onClick={() => playList(episodeList, index)}>
+                    <img src="/play-green.svg" alt="Tocar episódio" />
+                  </button>
                 </div>
 
-                <button type="button" onClick={() => playList(episodeList, index)}>
-                  <img src="/play-green.svg" alt="Tocar episódio" />
-                </button>
               </li>
             );
           })}
         </ul>
       </section>
-      <section className={styles.allEpuisodes}>
+      <section className={styles.allEpisodes}>
           <h2>Todos os episódios</h2>
           <table cellSpacing={0}>
             <thead>

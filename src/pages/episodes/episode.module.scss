@@ -24,7 +24,7 @@
 
             &:first-child {
                 left: 0;
-                top: 0;
+                top: 50%;
                 background: var(--purple-500);
                 transform: translate(-50%, -50%);
             }
@@ -32,7 +32,8 @@
             &:last-child {
                 right: 0;
                 top: 50%;
-                background: var(--purple-500);
+                background: var(--green-500);
+                transform: translate(50%, -50%);
             }
 
             &:hover {
@@ -52,7 +53,7 @@
 
         span {
             display: inline-block;
-            font-size: 0.875rem;
+            font-size: 0.876rem;
 
             & + span {
                 margin-left: 1rem;
