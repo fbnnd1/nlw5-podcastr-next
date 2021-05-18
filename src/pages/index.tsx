@@ -11,6 +11,7 @@ import { convertDurationToTimeString } from '../utils/convertDurationToTimeStrin
 import styles from './home.module.scss';
 import { useContext } from 'react';
 import { usePlayer } from '../contexts/PlayerContext';
+import {DarkModeContext} from '../contexts/DarkModeContext';
 
 type Episode = {
   id: string;
@@ -34,13 +35,15 @@ export default function Home({lastedEpisodes, allEpisodes}: HomeProps) {
   const {playList} = usePlayer(); //PlayerContext
 
   const episodeList = [...lastedEpisodes, ...allEpisodes];
+
+  const {isActiveDarkMode} = useContext(DarkModeContext);
   
   return (
-    <div className={styles.homepage}>
+    <div className={styles.homepage} data-active-dark-mode={isActiveDarkMode}>
       <Head>
         <title>Homne | Podcastr</title>
       </Head>
-      <section className={styles.lastedEpisodes}>
+      <section className={styles.lastedEpisodes} data-active-dark-mode={isActiveDarkMode}>
         <h2>Últimos lançamentos</h2>
         <ul>
           {lastedEpisodes.map((episode, index) => {
@@ -73,7 +76,7 @@ export default function Home({lastedEpisodes, allEpisodes}: HomeProps) {
           })}
         </ul>
       </section>
-      <section className={styles.allEpisodes}>
+      <section className={styles.allEpisodes} data-active-dark-mode={isActiveDarkMode}>
           <h2>Todos os episódios</h2>
           <table cellSpacing={0}>
             <thead>

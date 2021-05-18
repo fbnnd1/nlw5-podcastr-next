@@ -3,6 +3,10 @@
     height: calc(100vh - 6.5rem);
     overflow-y: scroll;
 
+    &[data-active-dark-mode='true'] {
+        background-color: var(--dark-purple);
+    }
+
     h2 {
         margin-top: 3rem;
         margin-bottom: 1.5rem;
@@ -10,6 +14,14 @@
 }
 
 .lastedEpisodes {
+    &[data-active-dark-mode='true'] {
+        background-color: var(--dark-purple);
+
+        h2 {
+            color: var(--white);
+        }
+    }
+
     ul {
         list-style: none;
         display: grid;
@@ -110,6 +122,29 @@
 
 .allEpisodes {
     padding-bottom: 2rem;
+
+    &[data-active-dark-mode='true'] {
+        background-color: var(--dark-purple);
+
+        h2 {
+            color: var(--white);
+        }
+
+        table {
+            background-color: var(--dark-purple);
+
+            th {
+                color: var(--white);
+            }
+            td {
+                color: var(--white);
+
+                a {
+                    color: var(--green-500);
+                }
+            }
+        }
+    }
 
     table {
         width: 100%;
