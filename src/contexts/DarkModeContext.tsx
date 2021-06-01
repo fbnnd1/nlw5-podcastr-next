@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from 'react';
 
 
 type DarkModeContextData = {
@@ -18,10 +18,21 @@ export function DarkModeContextProvider( {children}:DarkModeContextProviderProps
 
     function toggleDarkMode() {
         
+        localStorage.setItem("podcastr:darkMode",String(!isActiveDarkMode));
+        
         setIsActiveDarkMode(!isActiveDarkMode);
 
     }
 
+    useEffect(() => {
+
+        const activeDarkMode = localStorage.getItem("podcastr:darkMode");
+
+        if ((activeDarkMode) && (activeDarkMode == "true")) {
+            setIsActiveDarkMode(true);
+        }
+
+    }, []);
 
     return (
         <DarkModeContext.Provider
