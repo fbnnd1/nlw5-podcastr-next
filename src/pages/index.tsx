@@ -41,7 +41,7 @@ export default function Home({lastedEpisodes, allEpisodes}: HomeProps) {
   return (
     <div className={styles.homepage} data-active-dark-mode={isActiveDarkMode}>
       <Head>
-        <title>Homne | Podcastr</title>
+        <title>Home | Podcastr</title>
       </Head>
       <section className={styles.lastedEpisodes} data-active-dark-mode={isActiveDarkMode}>
         <h2>Últimos lançamentos</h2>
