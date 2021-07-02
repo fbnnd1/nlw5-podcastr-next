@@ -98,4 +98,6 @@ Segue o agradecimento a toda a comunidade de devs que participou do evento e mem
 ## Links externos
 
 - Rocketseat (https://rocketseat.com.br)  
-- Página do Spotify do FalaDev (https://open.spotify.com/show/3TNsKUGlP9YbV1pgy3ACrW)
+- Página do Spotify do FalaDev (https://open.spotify.com/show/3TNsKUGlP9YbV1pgy3ACrW)  
+- Canal da Twitch do professor Diego: https://www.twitch.tv/dieegosf  
+- Instagram do Tiago Luchtenberg, designer responsável pelo layout da versão desktop, tema claro da aplicação: https://www.instagram.com/tiagoluchtenberg/
