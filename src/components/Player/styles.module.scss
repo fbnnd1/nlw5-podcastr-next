@@ -30,6 +30,28 @@
             opacity: 0.5;
         }
     }
+
+    @media (max-width: 600px) {
+        min-height: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100vw;
+        padding: 1rem 4rem;
+
+        header {
+            display: none;
+        }
+
+        .currentEpisode {
+            display: none;
+        }
+
+        .emptyPlayer {
+            display: none;
+        }
+    }
 }
 
 .currentEpisode {
@@ -136,5 +158,18 @@
                 filter: brightness(0.95);
             }
         }
+    }
+
+    @media (max-width: 600px) {
+        margin-top: 0.5rem;
+    }
+}
+
+.episodeName_SmallScreen {
+    display: none;
+
+    @media (max-width: 600px) {
+        margin-top: 0.25rem;
+        display: block;
     }
 }

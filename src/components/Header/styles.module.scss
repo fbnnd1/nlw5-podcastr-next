@@ -20,7 +20,7 @@
         text-transform: capitalize;
         margin-right: auto;
     }
-
+    
     button { /*Button Toggle Dark Mode*/
         width: 100px;
         height: 40px;
@@ -40,4 +40,20 @@
 
     }
 
+    @media (max-width: 600px) {
+        width: 100vw;
+        justify-content: space-around;
+
+        p {
+            display: none;
+        }
+
+        span {
+            display: none;
+        }
+    }
+
+    @media (max-width: 390px) {
+        padding: 2rem 1.5rem;
+    }
 }

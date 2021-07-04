@@ -50,20 +50,22 @@ export default function Home({lastedEpisodes, allEpisodes}: HomeProps) {
             return (
               <li key={episode.id}>
                 
-                <Image 
-                  width={192} 
-                  height={192} 
-                  src={episode.thumbnail} 
-                  alt={episode.title}
-                  objectFit="cover"
-                />
+                <div>
+                  <Image 
+                    width={192} 
+                    height={192} 
+                    src={episode.thumbnail} 
+                    alt={episode.title}
+                    objectFit="cover"
+                  />
+                </div>
 
                 <div className={styles.episodeDetails}>
                   <Link href={`/episodes/${episode.id}`}>
                     <a>{episode.title}</a>
                   </Link>
                   <p>{episode.members}</p>
-                  <span>{episode.publishedAt}</span>
+                  <span>{episode.publishedAt}</span>&nbsp;
                   <span>{episode.durationAsString}</span>
                 
                   <button type="button" onClick={() => playList(episodeList, index)}>
@@ -87,6 +89,7 @@ export default function Home({lastedEpisodes, allEpisodes}: HomeProps) {
                 <th>Data</th>
                 <th>Duração</th>
                 <th></th>
+                <th className={styles.episodeSummary}></th>
               </tr>
             </thead>
             <tbody>
@@ -115,12 +118,45 @@ export default function Home({lastedEpisodes, allEpisodes}: HomeProps) {
                         <img src="/play-green.svg" alt="Tocar episódio" />
                       </button>
                     </td>
+                    <td className={styles.episodeSummary}>
+                      <table cellSpacing={0}>
+                        <thead>
+                          <tr>
+                            <th colSpan={3}>
+                              <Link href={`/episodes/${episode.id}`}>
+                                <a>{episode.title}</a>
+                              </Link>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Integrantes:</td>
+                            <td colSpan={2}>{episode.members}</td>
+                          </tr>
+                          <tr>
+                            <td>Data:</td>
+                            <td>{episode.publishedAt}</td>
+                            <td rowSpan={2}>
+                              <button type="button" onClick={() => playList(episodeList, index)}>
+                                <img src="/play-green.svg" alt="Tocar episódio" />
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Duração:</td>
+                            <td>{episode.durationAsString}</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </td>
                   </tr>
                 );
               })}
             </tbody>
           </table>
-      </section>
+        </section>
     </div>
   );
 }

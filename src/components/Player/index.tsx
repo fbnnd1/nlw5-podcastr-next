@@ -74,7 +74,7 @@ export function Player() {
             </header>
 
             { episode ? (
-                <div className={styles.CurrentEpisode}>
+                <div className={styles.currentEpisode}>
                     <Image
                         width={592}
                         height={592}
@@ -160,6 +160,9 @@ export function Player() {
                     >
                         <img src="/repeat.svg" alt="Repetir" />
                     </button>
+                </div>
+                <div className={styles.episodeName_SmallScreen}>
+                    { episode && (<strong>{episode.title}</strong>) }
                 </div>
             </footer>
         </div>
