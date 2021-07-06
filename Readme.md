@@ -31,29 +31,56 @@ O usuário pode tocar, pausar, avançar, retroceder, ativar modo aleatório para
 
 ### Recursos Extras
 
-Tema de visualização escuro.
+- Tema de visualização escuro;
+- Responsividade.
 
 ## Telas
 
-**Listagem com todos os episódios (Home)**
+<table cellspacing="0" border="0" cellpadding="1">
+  <tbody>
+    <tr>
+      <td colspan="4" align="center">Home (Telas grandes)</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <img src=".github/large-light-home.png" alt="Home - tela grande - modo claro" />
+      </td>
+      <td colspan="2">
+        <img src=".github/large-dark-home.png" alt="Home - tela grande - modo escuro" />
+      </td>
+    </tr>
+     <tr>
+       <td colspan="4" align="center">Detalhes Episódio (Telas grandes)</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <img src=".github/large-light-episode.png" alt="Detalhe episódio - tela grande - modo claro" />
+      </td>
+      <td colspan="2">
+        <img src=".github/large-dark-episode.png" alt="Detalhe episódio - tela grande - modo escuro" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">Home (Telas pequenas)</td>
+      <td colspan="2" align="center">Detalhes Episódio (Telas pequenas)</td>
+    </tr>
+    <tr>
+      <td>
+        <img src=".github/small-light-home.png" alt="Home - tela pequena - modo claro" />
+      </td>
+      <td>
+        <img src=".github/small-dark-home.png" alt="Home - tela pequena - modo escuro" />
+      </td>
+      <td>
+        <img src=".github/small-light-episode.png" alt="Detalhe episódio - tela pequena - modo claro" />
+      </td>
+      <td>
+        <img src=".github/small-dark-episode.png" alt="Detalhe episódio - tela pequena - modo escuro" />
+      </td>
+    </tr>
 
-Modo Claro
-
-![Home - Modo Claro](.github/TelaInicial_Desktop.png)
-
-Modo Escuro
-
-![Home - Modo Escuro](.github/TelaInicial_DesktopModoEscudo.png)
-
-**Página com detalhes sobre um episódio**
-
-Modo Claro
-
-![Página detalhes do episódio - Modo Claro](.github/TelaEpisodio_Desktop.png)
-
-Modo Escuro
-
-![Página detalhes do episódio - Modo Escuro](.github/TelaEpisodio_DesktopModoEscuro.png)
+  </tbody>
+</table>
 
 ## Requerimentos
 
